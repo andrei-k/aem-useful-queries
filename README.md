@@ -1,9 +1,9 @@
 <div align="center">
   <img height="60" src="https://static.wikia.nocookie.net/adobe/images/e/e2/Adobe_Experience_Manager_icon.svg/revision/latest/scale-to-width-down/512?cb=20200110101730" alt="AEM">
   <h1>Useful Queries in AEM</h1>
-</div>
 
-<span>A collection of various AEM queries that I've found to be useful.</span>
+  <span>A collection of various AEM queries that I've found to be useful.</span>
+</div>
 
 ---
 
