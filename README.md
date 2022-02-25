@@ -7,7 +7,7 @@
 
 ---
 
-###### Find pages that were last modified by specific user
+##### Find pages that were last modified by specific user
 
 ```sql
 SELECT * FROM [nt:base] AS s
@@ -19,7 +19,7 @@ WHERE
 
 ---
 
-###### Find active PDFs in the DAM (Type: XPath)
+##### Find active PDFs in the DAM (Type: XPath)
 
 ```
 /jcr:root/content/dam//*[
@@ -31,7 +31,7 @@ WHERE
 
 ---
 
-###### Find instances of the iframe component that uses "http:" (Type: SQL)
+##### Find instances of the iframe component that uses "http:" (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s 
