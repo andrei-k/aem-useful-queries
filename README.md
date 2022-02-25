@@ -7,7 +7,7 @@
 
 ---
 
-#### Find pages that were last modified by specific user
+#### Find pages that were last modified by specific user (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s
