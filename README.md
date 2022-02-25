@@ -3,6 +3,8 @@
   <h1>Useful Queries in AEM</h1>
 </div>
 
+<span>A collection of various AEM queries that I've found to be useful.</span>
+
 ---
 
 ###### Find pages that were last modified by specific user
@@ -14,10 +16,6 @@ WHERE
     s.[cq:template] IS NOT NULL AND
     s.[cq:lastModifiedBy] = 'user'
 ```
-
----
-
-<span>A collection of various AEM queries that I've found to be useful.</span>
 
 ---
 
