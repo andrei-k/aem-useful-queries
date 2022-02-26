@@ -7,6 +7,41 @@
 
 ---
 
+#### Find all instances of a string, excluding a particular path (Type: SQL)
+
+```sql
+SELECT * FROM [nt:base] AS s 
+WHERE
+    ISDESCENDANTNODE([/content]) AND
+    NOT ISDESCENDANTNODE([/path/to/exclude]) AND
+    CONTAINS(*, '"my string"')
+```
+
+---
+
+#### Find all instances of a particular component (Type: SQL)
+
+```sql
+SELECT * FROM [nt:base] AS s 
+WHERE
+    ISDESCENDANTNODE([/content]) AND
+    s.[sling:resourceType] = 'relative/path/to/component'
+```
+
+---
+
+#### Find all pages that were activated after a certain date (Type: SQL)
+
+```sql
+SELECT * FROM [nt:base] AS s
+WHERE
+    ISDESCENDANTNODE([/content]) AND
+    s.[cq:lastReplicationAction] = 'Activate' AND
+    s.[cq:lastReplicated] > '2022-02-25T00:00:00.000-05:00'
+```
+
+---
+
 #### Find pages that were last modified by specific user (Type: SQL)
 
 ```sql
@@ -31,13 +66,13 @@ WHERE
 
 ---
 
-#### Find instances of the iframe component that uses "http:" (Type: SQL)
+#### Find instances of the iframe component that uses "http:" in the target value (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s 
 WHERE
     ISDESCENDANTNODE([/content]) AND
-    s.[sling:resourceType] = 'path/to/iframe' AND
+    s.[sling:resourceType] = 'relative/path/to/iframe' AND
     s.[target] LIKE 'http:%'
 ```
 
