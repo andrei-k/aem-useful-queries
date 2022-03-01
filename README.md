@@ -7,7 +7,7 @@
 
 ---
 
-#### Find all instances of a string, excluding a particular path (Type: SQL)
+#### Find all instances of a string, excluding a particular path. (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s 
@@ -19,7 +19,7 @@ WHERE
 
 ---
 
-#### Find all instances of a particular component (Type: SQL)
+#### Find all instances of a particular component. (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s 
@@ -30,7 +30,30 @@ WHERE
 
 ---
 
-#### Find all pages that were activated after a certain date (Type: SQL)
+#### Find all pages that use a particular template. (Type: SQL)
+
+```sql
+SELECT * FROM [nt:base] AS s 
+WHERE
+    ISDESCENDANTNODE([/content]) AND
+    s.[cq:template] = '/path/to/template'
+```
+
+---
+
+#### Find all instances of a component where some property is not empty. (Type: SQL)
+
+```sql
+SELECT * FROM [nt:base] AS s 
+WHERE
+    ISDESCENDANTNODE([/content]) AND
+    s.[sling:resourceType] = 'relative/path/to/component' AND
+    s.[property] IS NOT NULL
+```
+
+---
+
+#### Find all pages that were activated after a certain date. (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s
@@ -42,7 +65,7 @@ WHERE
 
 ---
 
-#### Find pages that were last modified by specific user (Type: SQL)
+#### Find pages that were last modified by specific user. (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s
@@ -54,7 +77,7 @@ WHERE
 
 ---
 
-#### Find active PDFs in the DAM (Type: XPath)
+#### Find active PDFs in the DAM. (Type: XPath)
 
 ```
 /jcr:root/content/dam//*[
@@ -66,7 +89,7 @@ WHERE
 
 ---
 
-#### Find instances of the iframe component that uses "http:" in the target value (Type: SQL)
+#### Find instances of the iframe component that uses "http:" in the target value. (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s 
