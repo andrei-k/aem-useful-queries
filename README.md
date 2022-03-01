@@ -30,6 +30,18 @@ WHERE
 
 ---
 
+#### Find all instances of a component where a property contains some string. (Type: SQL)
+
+```sql
+SELECT * FROM [nt:base] AS s
+WHERE
+    ISDESCENDANTNODE([/content]) AND 
+    s.[sling:resourceType] = 'relative/path/to/component' AND
+    s.[property] LIKE '%string%'
+```
+
+---
+
 #### Find all pages that use a particular template. (Type: SQL)
 
 ```sql
