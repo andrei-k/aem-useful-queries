@@ -100,13 +100,39 @@ WHERE
 
 ---
 
-#### Find instances of the iframe component that uses "http:" in the target value. (Type: SQL)
+#### Find nodes by name. (Type: SQL2)
+
+```sql
+SELECT * FROM [nt:base] AS s
+WHERE
+    ISDESCENDANTNODE([/content]) AND
+    NAME() = 'name'
+```
+
+---
+
+#### Find all pages that are not active. This query will return pages where lastReplicationAction is either blank or doesn't equal to "Activate". (Type SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s 
 WHERE
     ISDESCENDANTNODE([/content]) AND
-    s.[sling:resourceType] = 'relative/path/to/iframe' AND
-    s.[target] LIKE 'http:%'
+    s.[cq:template] IS NOT NULL AND
+    (
+        s.[cq:lastReplicationAction] <> 'Activate' OR
+        s.[cq:lastReplicationAction]  IS NULL
+    )
 ```
 
+---
+
+#### Find all pages that have never been activated and are older than some specific date. This provides a good way to find unused pages to purge. (Type SQL)
+
+```sql
+SELECT * FROM [nt:base] AS s 
+WHERE
+    ISDESCENDANTNODE([/content]) AND
+    s.[cq:lastReplicationAction] IS NULL AND
+    s.[cq:template] IS NOT NULL AND
+    s.[cq:lastModified] < '2020-01-00T00:00:00.000-05:00'
+```
