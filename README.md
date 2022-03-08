@@ -4,10 +4,15 @@
   <p>A collection of various AEM queries that I've found to be useful.</p>
 </div>
 
-### Table of Contents
+
+#### Table of Contents
 **[Find all instances of a string, excluding a particular path.](#find-all-instances-of-a-string-excluding-a-particular-path-type-sql)**<br>
 **[Find all instances of a particular component.](#find-all-instances-of-a-particular-component-type-sql)**<br>
 **[Find all instances of a component where a property contains some string.](#find-all-instances-of-a-component-where-a-property-contains-some-string-type-sql)**<br>
+**[Find all pages that use a particular template.](#find-all-pages-that-use-a-particular-template-type-sql)**<br>
+**[Find all instances of a component where some property is not empty.](#find-all-instances-of-a-component-where-some-property-is-not-empty-type-sql)**<br>
+**[Find all pages that were activated after a certain date.](#find-all-pages-that-were-activated-after-a-certain-date-type-sql)**<br>
+
 
 ---
 
