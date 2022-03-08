@@ -5,9 +5,9 @@
 </div>
 
 ### Table of Contents
-**[Find all instances of a string, excluding a particular path.](#string-excluding-path)**<br>
-**[Find all instances of a particular component.](#component)**<br>
-**[Find all instances of a component where a property contains some string.](#component-with-property)**<br>
+**[Find all instances of a string, excluding a particular path.](#find-all-instances-of-a-string-excluding-a-particular-path-type-sql)**<br>
+**[Find all instances of a particular component.](#find-all-instances-of-a-particular-component-type-sql)**<br>
+**[Find all instances of a component where a property contains some string.](#find-all-instances-of-a-component-where-a-property-contains-some-string-type-sql)**<br>
 
 ---
 
