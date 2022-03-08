@@ -4,6 +4,11 @@
   <p>A collection of various AEM queries that I've found to be useful.</p>
 </div>
 
+### Table of Contents
+**[Find all instances of a string, excluding a particular path.](#string-excluding-path)**<br>
+**[Find all instances of a particular component.](#component)**<br>
+**[Find all instances of a component where a property contains some string.](#component-with-property)**<br>
+
 ---
 
 #### Find all instances of a string, excluding a particular path. (Type: SQL)
