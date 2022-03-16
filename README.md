@@ -13,11 +13,11 @@
 
 #### Pages
 **[Count pages under a particular path](#count-pages-under-a-particular-path-type-sql2)**<br>
-**[Find pages that use a particular template](#find-all-pages-that-use-a-particular-template-type-sql2)**<br>
-**[Find pages that were activated after a certain date](#find-all-pages-that-were-activated-after-a-certain-date-type-sql2)**<br>
-**[Find pages that are not active](#find-all-pages-that-are-not-active-this-query-will-return-pages-where-lastreplicationaction-is-either-blank-or-doesnt-equal-to-activate-type-sql2)**<br>
-**[Find pages that have never been activated and are older than some specific date](#find-all-pages-that-have-never-been-activated-and-are-older-than-some-specific-date-this-provides-a-good-way-to-find-unused-pages-to-purge-type-sql2)**<br>
-**[Find all pages that were created within some date range](#find-all-pages-that-were-created-within-some-date-range-type-sql2)**<br>
+**[Find pages that use a particular template](#find-pages-that-use-a-particular-template-type-sql2)**<br>
+**[Find pages that were activated after a certain date](#find-pages-that-were-activated-after-a-certain-date-type-sql2)**<br>
+**[Find pages that are not active](#find-pages-that-are-not-active-this-query-will-return-pages-where-lastreplicationaction-is-either-blank-or-doesnt-equal-to-activate-type-sql2)**<br>
+**[Find pages that have never been activated and are older than some specific date](#find-pages-that-have-never-been-activated-and-are-older-than-some-specific-date-this-provides-a-good-way-to-find-unused-pages-to-purge-type-sql2)**<br>
+**[Find pages that were created within some date range](#find-pages-that-were-created-within-some-date-range-type-sql2)**<br>
 **[Find pages that were last modified by specific user](#find-pages-that-were-last-modified-by-specific-user-type-sql2)**<br>
 
 #### Strings and Files
