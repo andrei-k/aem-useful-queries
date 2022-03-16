@@ -28,17 +28,7 @@
 
 ---
 
-#### Find all instances of a string, excluding a particular path. (Type: SQL)
-
-```sql
-SELECT * FROM [nt:base] AS s 
-WHERE
-    ISDESCENDANTNODE([/content]) AND
-    NOT ISDESCENDANTNODE([/path/to/exclude]) AND
-    CONTAINS(*, '"my string"')
-```
-
----
+### Components
 
 #### Find all instances of a particular component. (Type: SQL)
 
@@ -63,6 +53,20 @@ WHERE
 
 ---
 
+#### Find all instances of a component where some property is not empty. (Type: SQL)
+
+```sql
+SELECT * FROM [nt:base] AS s 
+WHERE
+    ISDESCENDANTNODE([/content]) AND
+    s.[sling:resourceType] = 'relative/path/to/component' AND
+    s.[property] IS NOT NULL
+```
+
+---
+
+### Pages
+
 #### Find all pages that use a particular template. (Type: SQL)
 
 ```sql
@@ -74,14 +78,19 @@ WHERE
 
 ---
 
-#### Find all instances of a component where some property is not empty. (Type: SQL)
+
+
+
+
+
+#### Find all instances of a string, excluding a particular path. (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s 
 WHERE
     ISDESCENDANTNODE([/content]) AND
-    s.[sling:resourceType] = 'relative/path/to/component' AND
-    s.[property] IS NOT NULL
+    NOT ISDESCENDANTNODE([/path/to/exclude]) AND
+    CONTAINS(*, '"my string"')
 ```
 
 ---
