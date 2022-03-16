@@ -65,6 +65,7 @@ WHERE
 
 ---
 
+
 ### Pages
 
 #### Find all pages that use a particular template. (Type: SQL)
@@ -78,19 +79,18 @@ WHERE
 
 ---
 
-
-
-
-
-
-#### Find all instances of a string, excluding a particular path. (Type: SQL)
+#### Find all pages that are not active. (Type: SQL)
+This query will return pages where lastReplicationAction is either blank or doesn't equal to "Activate".
 
 ```sql
 SELECT * FROM [nt:base] AS s 
 WHERE
     ISDESCENDANTNODE([/content]) AND
-    NOT ISDESCENDANTNODE([/path/to/exclude]) AND
-    CONTAINS(*, '"my string"')
+    s.[cq:template] IS NOT NULL AND
+    (
+        s.[cq:lastReplicationAction] <> 'Activate' OR
+        s.[cq:lastReplicationAction]  IS NULL
+    )
 ```
 
 ---
@@ -119,6 +119,26 @@ WHERE
 
 ---
 
+
+
+
+
+
+### Strings and Files
+
+#### Find all instances of a string, excluding a particular path. (Type: SQL)
+
+```sql
+SELECT * FROM [nt:base] AS s 
+WHERE
+    ISDESCENDANTNODE([/content]) AND
+    NOT ISDESCENDANTNODE([/path/to/exclude]) AND
+    CONTAINS(*, '"my string"')
+```
+
+---
+
+
 #### Find active PDFs in the DAM. (Type: XPath)
 
 ```
@@ -142,22 +162,8 @@ WHERE
 
 ---
 
-#### Find all pages that are not active. This query will return pages where lastReplicationAction is either blank or doesn't equal to "Activate". (Type: SQL)
-
-```sql
-SELECT * FROM [nt:base] AS s 
-WHERE
-    ISDESCENDANTNODE([/content]) AND
-    s.[cq:template] IS NOT NULL AND
-    (
-        s.[cq:lastReplicationAction] <> 'Activate' OR
-        s.[cq:lastReplicationAction]  IS NULL
-    )
-```
-
----
-
-#### Find all pages that have never been activated and are older than some specific date. This provides a good way to find unused pages to purge. (Type: SQL)
+#### Find all pages that have never been activated and are older than some specific date. (Type: SQL)
+This provides a good way to find unused pages to purge.
 
 ```sql
 SELECT * FROM [nt:base] AS s 
