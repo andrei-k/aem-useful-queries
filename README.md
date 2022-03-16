@@ -145,6 +145,7 @@ WHERE
     s.[jcr:created] < '2022-01-01T00:00:00.000-05:00'
 ```
 
+***
 <br>
 
 ### Strings and Files
