@@ -28,7 +28,7 @@
 
 ## Components
 
-#### Find all instances of a particular component. (Type: SQL)
+#### Find all instances of a particular component (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s 
@@ -39,7 +39,7 @@ WHERE
 
 ---
 
-#### Find all instances of a component where a property contains some string. (Type: SQL)
+#### Find all instances of a component where a property contains some string (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s
@@ -51,7 +51,7 @@ WHERE
 
 ---
 
-#### Find all instances of a component where some property is not empty. (Type: SQL)
+#### Find all instances of a component where some property is not empty (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s 
@@ -67,7 +67,7 @@ WHERE
 
 ## Pages
 
-#### Find all pages that use a particular template. (Type: SQL)
+#### Find all pages that use a particular template (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s 
@@ -78,7 +78,7 @@ WHERE
 
 ---
 
-#### Find all pages that were activated after a certain date. (Type: SQL)
+#### Find all pages that were activated after a certain date (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s
@@ -90,7 +90,7 @@ WHERE
 
 ---
 
-#### Find all pages that are not active. (Type: SQL)
+#### Find all pages that are not active (Type: SQL)
 This query will return pages where lastReplicationAction is either blank or doesn't equal to "Activate".
 
 ```sql
@@ -106,7 +106,7 @@ WHERE
 
 ---
 
-#### Find all pages that have never been activated and are older than some specific date. (Type: SQL)
+#### Find all pages that have never been activated and are older than some specific date (Type: SQL)
 This provides a good way to find unused pages to purge.
 
 ```sql
@@ -120,7 +120,7 @@ WHERE
 
 ---
 
-#### Find all pages that were created within some date range. (Type: SQL)
+#### Find all pages that were created within some date range (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s
@@ -133,7 +133,7 @@ WHERE
 
 ---
 
-#### Find pages that were last modified by specific user. (Type: SQL)
+#### Find pages that were last modified by specific user (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s
@@ -148,7 +148,7 @@ WHERE
 
 ## Strings and Files
 
-#### Find all instances of a string, excluding a particular path. (Type: SQL)
+#### Find all instances of a string, excluding a particular path (Type: SQL)
 
 ```sql
 SELECT * FROM [nt:base] AS s 
@@ -160,7 +160,7 @@ WHERE
 
 ---
 
-#### Find active PDFs in the DAM. (Type: XPath)
+#### Find active PDFs in the DAM (Type: XPath)
 
 ```
 /jcr:root/content/dam//*[
@@ -172,7 +172,7 @@ WHERE
 
 ---
 
-#### Find nodes by name. (Type: SQL2)
+#### Find nodes by name (Type: SQL2)
 
 ```sql
 SELECT * FROM [nt:base] AS s
