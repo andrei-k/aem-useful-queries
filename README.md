@@ -26,8 +26,6 @@
 
 <br>
 
----
-
 ## Components
 
 #### Find all instances of a particular component. (Type: SQL)
@@ -160,6 +158,7 @@ WHERE
     CONTAINS(*, '"my string"')
 ```
 
+---
 
 #### Find active PDFs in the DAM. (Type: XPath)
 
@@ -171,6 +170,7 @@ WHERE
 ]
 ```
 
+---
 
 #### Find nodes by name. (Type: SQL2)
 
@@ -180,4 +180,6 @@ WHERE
     ISDESCENDANTNODE([/content]) AND
     NAME() = 'name'
 ```
+
+---
 
