@@ -6,18 +6,23 @@
 <br>
 
 ### Table of Contents
-**[Find all instances of a string, excluding a particular path.](#find-all-instances-of-a-string-excluding-a-particular-path-type-sql)**<br>
+#### Components
 **[Find all instances of a particular component.](#find-all-instances-of-a-particular-component-type-sql)**<br>
 **[Find all instances of a component where a property contains some string.](#find-all-instances-of-a-component-where-a-property-contains-some-string-type-sql)**<br>
-**[Find all pages that use a particular template.](#find-all-pages-that-use-a-particular-template-type-sql)**<br>
 **[Find all instances of a component where some property is not empty.](#find-all-instances-of-a-component-where-some-property-is-not-empty-type-sql)**<br>
+
+#### Pages
+**[Find all pages that use a particular template.](#find-all-pages-that-use-a-particular-template-type-sql)**<br>
 **[Find all pages that were activated after a certain date.](#find-all-pages-that-were-activated-after-a-certain-date-type-sql)**<br>
-**[Find pages that were last modified by specific user.](#find-pages-that-were-last-modified-by-specific-user-type-sql)**<br>
-**[Find active PDFs in the DAM.](#find-active-pdfs-in-the-dam-type-xpath)**<br>
-**[Find nodes by name.](#find-nodes-by-name-type-sql2)**<br>
 **[Find all pages that are not active.](#find-all-pages-that-are-not-active-this-query-will-return-pages-where-lastreplicationaction-is-either-blank-or-doesnt-equal-to-activate-type-sql)**<br>
 **[Find all pages that have never been activated and are older than some specific date.](#find-all-pages-that-have-never-been-activated-and-are-older-than-some-specific-date-this-provides-a-good-way-to-find-unused-pages-to-purge-type-sql)**<br>
 **[Find all pages that were created within some date range.](#find-all-pages-that-were-created-within-some-date-range-type-sql)**<br>
+**[Find pages that were last modified by specific user.](#find-pages-that-were-last-modified-by-specific-user-type-sql)**<br>
+
+#### Strings and Files
+**[Find all instances of a string, excluding a particular path.](#find-all-instances-of-a-string-excluding-a-particular-path-type-sql)**<br>
+**[Find active PDFs in the DAM.](#find-active-pdfs-in-the-dam-type-xpath)**<br>
+**[Find nodes by name.](#find-nodes-by-name-type-sql2)**<br>
 
 <br>
 
