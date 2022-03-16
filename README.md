@@ -28,7 +28,7 @@
 
 ---
 
-### Components
+## Components
 
 #### Find all instances of a particular component. (Type: SQL)
 
@@ -67,7 +67,7 @@ WHERE
 
 <br>
 
-### Pages
+## Pages
 
 #### Find all pages that use a particular template. (Type: SQL)
 
@@ -148,7 +148,7 @@ WHERE
 ***
 <br>
 
-### Strings and Files
+## Strings and Files
 
 #### Find all instances of a string, excluding a particular path. (Type: SQL)
 
