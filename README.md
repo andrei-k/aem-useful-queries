@@ -106,18 +106,6 @@ WHERE
 
 ---
 
-#### Find pages that were last modified by specific user. (Type: SQL)
-
-```sql
-SELECT * FROM [nt:base] AS s
-WHERE
-    ISDESCENDANTNODE([/content]) AND 
-    s.[cq:template] IS NOT NULL AND
-    s.[cq:lastModifiedBy] = 'user'
-```
-
----
-
 #### Find all pages that have never been activated and are older than some specific date. (Type: SQL)
 This provides a good way to find unused pages to purge.
 
@@ -141,6 +129,18 @@ WHERE
     s.[cq:template] = '/path/to/template' AND
     s.[jcr:created] > '2021-01-01T00:00:00.000-05:00' AND
     s.[jcr:created] < '2022-01-01T00:00:00.000-05:00'
+```
+
+---
+
+#### Find pages that were last modified by specific user. (Type: SQL)
+
+```sql
+SELECT * FROM [nt:base] AS s
+WHERE
+    ISDESCENDANTNODE([/content]) AND 
+    s.[cq:template] IS NOT NULL AND
+    s.[cq:lastModifiedBy] = 'user'
 ```
 
 ***
