@@ -12,6 +12,7 @@
 **[Find all instances of a component where some property is not empty](#find-all-instances-of-a-component-where-some-property-is-not-empty-type-sql)**<br>
 
 #### Pages
+**[Count pages under a particular path](#count-pages-under-a-particular-path)**<br>
 **[Find all pages that use a particular template](#find-all-pages-that-use-a-particular-template-type-sql)**<br>
 **[Find all pages that were activated after a certain date](#find-all-pages-that-were-activated-after-a-certain-date-type-sql)**<br>
 **[Find all pages that are not active](#find-all-pages-that-are-not-active-this-query-will-return-pages-where-lastreplicationaction-is-either-blank-or-doesnt-equal-to-activate-type-sql)**<br>
@@ -66,6 +67,15 @@ WHERE
 <br>
 
 ## Pages
+
+#### Count pages under a particular path (Type: SQL)
+
+```sql
+SELECT * FROM [nt:base] AS s 
+WHERE
+    ISDESCENDANTNODE([/content]) AND
+    s.[cq:template] IS NOT NULL
+```
 
 #### Find all pages that use a particular template (Type: SQL)
 
