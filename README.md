@@ -78,6 +78,18 @@ WHERE
 
 ---
 
+#### Find all pages that were activated after a certain date. (Type: SQL)
+
+```sql
+SELECT * FROM [nt:base] AS s
+WHERE
+    ISDESCENDANTNODE([/content]) AND
+    s.[cq:lastReplicationAction] = 'Activate' AND
+    s.[cq:lastReplicated] > '2022-02-25T00:00:00.000-05:00'
+```
+
+---
+
 #### Find all pages that are not active. (Type: SQL)
 This query will return pages where lastReplicationAction is either blank or doesn't equal to "Activate".
 
@@ -90,18 +102,6 @@ WHERE
         s.[cq:lastReplicationAction] <> 'Activate' OR
         s.[cq:lastReplicationAction]  IS NULL
     )
-```
-
----
-
-#### Find all pages that were activated after a certain date. (Type: SQL)
-
-```sql
-SELECT * FROM [nt:base] AS s
-WHERE
-    ISDESCENDANTNODE([/content]) AND
-    s.[cq:lastReplicationAction] = 'Activate' AND
-    s.[cq:lastReplicated] > '2022-02-25T00:00:00.000-05:00'
 ```
 
 ---
