@@ -10,6 +10,7 @@
 **[Find all instances of a particular component](#find-all-instances-of-a-particular-component-type-sql2)**<br>
 **[Find all instances of a component where a property contains some string](#find-all-instances-of-a-component-where-a-property-contains-some-string-type-sql2)**<br>
 **[Find all instances of a component where some property is not empty](#find-all-instances-of-a-component-where-some-property-is-not-empty-type-sql2)**<br>
+**[Find all instances of a component on active pages only](#find-all-instances-of-a-component-on-active-pages-only-type-sql2)**<br>
 
 #### Pages
 **[Count pages under a particular path](#count-pages-under-a-particular-path-type-sql2)**<br>
@@ -60,6 +61,19 @@ WHERE
     ISDESCENDANTNODE([/content]) AND
     s.[sling:resourceType] = 'relative/path/to/component' AND
     s.[property] IS NOT NULL
+```
+
+---
+
+#### Find all instances of a component on active pages only (Type: SQL2)
+
+```sql
+SELECT * FROM [cq:PageContent] AS page
+INNER JOIN [nt:base] AS component ON ISDESCENDANTNODE(component, page)
+WHERE
+    ISDESCENDANTNODE(page, [/content]) AND
+    page.[cq:lastReplicationAction] = 'Activate' AND
+    component.[sling:resourceType] = 'relative/path/to/component'
 ```
 
 ---
