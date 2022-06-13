@@ -11,7 +11,7 @@
 **[Find all instances of a component where a property contains some string](#find-all-instances-of-a-component-where-a-property-contains-some-string-type-sql2)**<br>
 **[Find all instances of a component where some property is not empty](#find-all-instances-of-a-component-where-some-property-is-not-empty-type-sql2)**<br>
 **[Find all instances of a component on active pages only](#find-all-instances-of-a-component-on-active-pages-only-type-sql2)**<br>
-**[Find all instances of a component that are descendants of a particular parent node name](##find-all-instances-of-a-component-that-are-descendants-of-a-particular-parent-node-name-type-sql2)**<br>
+**[Find all instances of a component that are descendants of a particular parent node name](#find-all-instances-of-a-component-that-are-descendants-of-a-particular-parent-node-name-type-sql2)**<br>
 
 #### Pages
 **[Count pages under a particular path](#count-pages-under-a-particular-path-type-sql2)**<br>
