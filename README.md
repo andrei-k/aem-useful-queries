@@ -78,6 +78,19 @@ WHERE
 
 ---
 
+#### Find all instances of a component that are descendants of a particular parent node name (Type: SQL2)
+
+```sql
+SELECT * FROM [nt:base] AS parent
+INNER JOIN [nt:base] AS component ON ISDESCENDANTNODE(component, parent)
+WHERE
+    ISDESCENDANTNODE(parent, [/content]) AND
+    NAME(parent) = 'node-name' AND
+    component.[sling:resourceType] = 'relative/path/to/component'
+```
+
+---
+
 <br>
 
 ## Pages
