@@ -11,7 +11,7 @@
 **[Find all instances of a component where a property contains some string](#find-all-instances-of-a-component-where-a-property-contains-some-string-type-sql2)**<br>
 **[Find all instances of a component where some property is not empty](#find-all-instances-of-a-component-where-some-property-is-not-empty-type-sql2)**<br>
 **[Find all instances of a component on active pages only](#find-all-instances-of-a-component-on-active-pages-only-type-sql2)**<br>
-**[Find all instances of a component on active pages only](##find-all-instances-of-a-component-that-are-descendants-of-a-particular-parent-node-name-type-sql2)**<br>
+**[Find all instances of a component that are descendants of a particular parent node name](##find-all-instances-of-a-component-that-are-descendants-of-a-particular-parent-node-name-type-sql2)**<br>
 
 #### Pages
 **[Count pages under a particular path](#count-pages-under-a-particular-path-type-sql2)**<br>
@@ -20,7 +20,7 @@
 **[Find pages that are not active](#find-pages-that-are-not-active-this-query-will-return-pages-where-lastreplicationaction-is-either-blank-or-doesnt-equal-to-activate-type-sql2)**<br>
 **[Find pages that have never been activated and are older than some specific date](#find-pages-that-have-never-been-activated-and-are-older-than-some-specific-date-this-provides-a-good-way-to-find-unused-pages-to-purge-type-sql2)**<br>
 **[Find pages that were created within some date range](#find-pages-that-were-created-within-some-date-range-type-sql2)**<br>
-**[Find all instances of a component that are descendants of a particular parent node name](#find-pages-that-were-last-modified-by-specific-user-type-sql2)**<br>
+**[Find pages that were last modified by specific user](#find-pages-that-were-last-modified-by-specific-user-type-sql2)**<br>
 
 #### Strings and Files
 **[Find all instances of a string, excluding a particular path](#find-all-instances-of-a-string-excluding-a-particular-path-type-sql2)**<br>
