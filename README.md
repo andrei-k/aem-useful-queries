@@ -209,7 +209,7 @@ WHERE
 SELECT * FROM [nt:base] AS s
 WHERE
     ISDESCENDANTNODE([/content]) AND
-    NAME() = 'name'
+    NAME() = 'node-name'
 ```
 
 ---
